@@ -1,13 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#liNav {
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+#liNav:hover {
+  color: rgb(59, 231, 160);
+}
+#liNavContact{
+  color:rgb(43, 255, 131) ;
+  font-weight: 700;
+}
+#liNavContact:hover{
+  background-color:rgb(43, 255, 131);
+  color: black;
+}
+
+.btnDownload {
+  color: rgb(43, 255, 131);
+  border: solid 2px;
+  border-Radius: 50px;
+  width: 168px;
+  height: 40px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.btnDownload:hover{
+  background-color:rgb(43, 255, 131) ;
+  color: #000;
+
+}
+#sectionprj:hover{
+  border:2px solid rgb(43, 255, 131) ;
+}
+#sectionprj:hover #title{
+  color: rgb(43, 255, 131);
+}
+#prj{
+  border: 2px solid rgb(195, 195, 195);
+}
+#prj:hover{
+  border: 2px solid rgb(43, 255, 131);
+}
+#prj:hover #title{
+  color: rgb(43, 255, 131);
 }
