@@ -19,7 +19,7 @@ export default function projects() {
     },
   ];
 
-  let info = data.map((el) => (
+  let info = data.map((el) => ( 
     <>
         <div style={{ width: "" }}>
           <img className="rounded-md" src={img1}></img>
