@@ -1,6 +1,8 @@
 import React from "react";
 import img1 from "../imgs/imgs prg dashboard/img1.png";
 
+// demo code
+
 export default function projects() {
   let data = [
     {
