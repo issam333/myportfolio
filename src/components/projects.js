@@ -35,8 +35,8 @@ export default function projects() {
   ));
 
   return (
-    <>
-      <div id="prj" className="border rounded-md capitalize mt-12 mb-4">
+    <div className="flex">
+      <div id="prj" className="border rounded-md capitalize mt-12 mb-4 justify-center">
         <div
           id="title"
           className="flex font-extrabold text-white  justify-center mt-5"
@@ -52,6 +52,6 @@ export default function projects() {
           {info}
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -5,7 +5,6 @@
 * {
   margin: 0px;
   padding: 0px;
-
 }
 body {
   margin: 0;
@@ -30,41 +29,82 @@ code {
 #liNav:hover {
   color: rgb(59, 231, 160);
 }
-#liNavContact{
-  color:rgb(43, 255, 131) ;
+#liNavContact {
+  color: rgb(43, 255, 131);
   font-weight: 700;
 }
-#liNavContact:hover{
-  background-color:rgb(43, 255, 131);
+#liNavContact:hover {
+  background-color: rgb(43, 255, 131);
   color: black;
 }
 
 .btnDownload {
   color: rgb(43, 255, 131);
   border: solid 2px;
-  border-Radius: 50px;
+  border-radius: 50px;
   width: 168px;
   height: 40px;
   font-weight: 700;
   transition: 0.5s;
 }
-.btnDownload:hover{
-  background-color:rgb(43, 255, 131) ;
+.btnDownload:hover {
+  background-color: rgb(43, 255, 131);
   color: #000;
-
 }
-#sectionprj:hover{
-  border:2px solid rgb(43, 255, 131) ;
-}
-#sectionprj:hover #title{
-  color: rgb(43, 255, 131);
-}
-#prj{
-  border: 2px solid rgb(195, 195, 195);
-}
-#prj:hover{
+#sectionprj:hover {
   border: 2px solid rgb(43, 255, 131);
 }
-#prj:hover #title{
+#sectionprj:hover #title {
   color: rgb(43, 255, 131);
 }
+#prj {
+  border: 2px solid rgb(195, 195, 195);
+}
+#prj:hover {
+  border: 2px solid rgb(43, 255, 131);
+}
+#prj:hover #title {
+  color: rgb(43, 255, 131);
+}
+
+/* icon skills */
+
+#iconSkills1:hover {
+  color: rgb(255, 60, 0);
+}
+#iconSkills2:hover {
+  color: rgb(251, 255, 0);
+}
+#iconSkills3:hover {
+  color: rgb(251, 255, 0);
+}
+#iconSkills4:hover {
+  color: rgb(0, 179, 255);
+}
+#iconSkills5:hover {
+  color: rgb(144, 0, 255);
+}
+#iconSkills6:hover {
+  color: rgb(255, 60, 0);
+}
+#iconSkills7:hover {
+  color: rgb(255, 60, 0);
+}
+
+#borderCicle {
+  border:2px solid rgb(43, 255, 131);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  animation: rotate 4s linear infinite ;
+}
+
+/* @keyframes rotate{
+  form{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+} */

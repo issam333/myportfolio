@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Home from "./components/home";
 import Projects from "./components/projects";
+import Skills  from "./components/skills";
 
 export default function home() {
   return (
@@ -54,6 +55,7 @@ export default function home() {
         </header>
         <Home />
         <Projects/>
+        <Skills/>
       </div>
     </div>
   );
