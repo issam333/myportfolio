@@ -115,10 +115,10 @@ export default function home() {
                   opacity:'0.2',
                 }}
               />
-              <svg style={{position:"absolute",height:'100%',width:'100%',}} >
+              <svg style={{position:"absolute",height:'100%',width:'100%',background:'green',}} >
               <circle
-                cx="00"
-                cy="00"
+                cx="60"
+                cy="60"
                 r="50"
                 id="borderCicle"
               ></circle>
