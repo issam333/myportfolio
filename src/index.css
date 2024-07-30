@@ -92,12 +92,16 @@ code {
 }
 
 #borderCicle {
-  border:2px solid rgb(43, 255, 131);
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  /* border:2px solid rgb(43, 255, 131); */
+  /* position: absolute; */
+  /* height: 100%;
+  width: 100%; */
   border-radius: 50%;
-  animation: rotate 4s linear infinite ;
+  /* cursor: pointer; */
+  stroke: red;
+  fill: transparent;
+  stroke-dasharray: 10 13 43;
+  /* animation: rotate 4s linear infinite ; */
 }
 
 /* @keyframes rotate{

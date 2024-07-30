@@ -7,8 +7,7 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import { faCircle } from "@fortawesome/free-regular-svg-icons";
-import { hover } from "@testing-library/user-event/dist/hover";
+import { motion } from "framer-motion";
 import cv from "./cv.pdf";
 import myImg from "./myImg.jpg";
 
@@ -25,9 +24,9 @@ export default function home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)" }}>
           {/* partLeft */}
           <div className="partLeft">
-            <p className="font-mono text-sm text-slate-300 ">
+            <motion.p className="font-mono text-sm text-slate-300 ">
               Frontend Web Developer
-            </p>
+            </motion.p>
             <p className="font-mono text-5xl text-slate-300">Hello I'm</p>
             <p
               style={{ color: "rgb(43, 255, 131)" }}
@@ -94,10 +93,7 @@ export default function home() {
 
           {/* partRight */}
 
-          <div
-            style={{ display: "flex", }}
-            className=" "
-          >
+          <div style={{ display: "flex" }} className=" ">
             <div
               style={{
                 display: "flex",
@@ -107,20 +103,26 @@ export default function home() {
                 margin: "auto",
                 overflow: "hiden",
                 position: "relative",
+                background:'aqua',
               }}
             >
               <img
                 src={myImg}
-                
                 style={{
                   borderRadius: "50%",
                   height: "auto",
                   overflow: "hiden",
+                  opacity:'0.2',
                 }}
               />
-              <div id="borderCicle"
-                
-              ></div>
+              <svg style={{position:"absolute",height:'100%',width:'100%',}} >
+              <circle
+                cx="00"
+                cy="00"
+                r="50"
+                id="borderCicle"
+              ></circle>
+              </svg>
             </div>
           </div>
         </div>
