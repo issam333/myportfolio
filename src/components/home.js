@@ -12,6 +12,8 @@ import cv from "./cv.pdf";
 import myImg from "./myImg.jpg";
 import CountUp from "react-countup";
 
+
+
 export default function home() {
   let stats = [
     {

@@ -9,7 +9,6 @@ import {
   faLaravel,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 export default function skills() {
   return (
