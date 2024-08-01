@@ -16,7 +16,6 @@ export default function skills() {
     <div className="text-slate-100 p-5 mt-2 block">
       <h1 className="text-center text-2xl m-1">my skills</h1>
       <p className="text-sm m-3">
-        lksdf slkfkl lksdjslf slfksjkdl ljsdlk lkslfj woepwe{" "}
       </p>
 
       <div className="flex gap-6 flex-wrap m-1 justify-center ">

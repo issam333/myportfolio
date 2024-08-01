@@ -23,7 +23,7 @@ export default function projects() {
 
   let info = data.map((el) => ( 
     <>
-        <div style={{ width: "" }}>
+        <div style={{ width: "",background:'rgb(35, 38, 53)', padding:'10px',borderRadius:'10px', }}>
           <img className="rounded-md" src={img1}></img>
           <a href="">
             <p className="text-center text-zinc-200 mt-2">{el.title}</p>

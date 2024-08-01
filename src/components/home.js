@@ -10,8 +10,25 @@ import {
 import { motion } from "framer-motion";
 import cv from "./cv.pdf";
 import myImg from "./myImg.jpg";
+import CountUp from "react-countup";
 
 export default function home() {
+  let stats = [
+    {
+      num: 12,
+      text: "Projects Completed",
+    },
+    {
+      num: 7,
+      text: "Technologies Mastered",
+    },
+    {
+      num: 500,
+      text: "Code Commits",
+    },
+  ];
+  console.log();
+
   return (
     <>
       <body
@@ -93,7 +110,7 @@ export default function home() {
 
           {/* partRight */}
 
-          <div style={{ display: "flex" }} className=" ">
+          <div style={{ display: "flex", minWidth: "400px" }} className=" ">
             <div
               style={{
                 display: "flex",
@@ -103,55 +120,72 @@ export default function home() {
                 margin: "auto",
                 overflow: "hiden",
                 position: "relative",
-                background:'aqua',
+                // background: "aqua",
               }}
             >
               <img
                 src={myImg}
                 style={{
                   borderRadius: "50%",
-                  height: "auto",
+                  width: "199px",
                   overflow: "hiden",
-                  opacity:'0.2',
+                  height: "199px",
+                  margin: "10px",
                 }}
               />
-              <svg style={{position:"absolute",height:'100%',width:'100%',background:'green',}} >
-              <circle
-                cx="60"
-                cy="60"
-                r="50"
-                id="borderCicle"
-              ></circle>
-              </svg>
+              <motion.svg
+                style={{
+                  position: "absolute",
+                  height: "100%",
+                  width: "100%",
+                  // background: "green",
+                }}
+              >
+                <motion.circle
+                  cx="143"
+                  cy="109.5"
+                  r="100"
+                  id="borderCicle"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  initial={{ strokeDasharray: "24 10 0 0" }}
+                  animate={{
+                    strokeDasharray: [
+                      "15 120 25 25",
+                      "16 25 92 72",
+                      "4 250 22 22",
+                    ],
+                    rotate: [120, 360],
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    repeatType: "mirror",
+                  }}
+                ></motion.circle>
+              </motion.svg>
             </div>
           </div>
         </div>
-
-        <div
-          style={{ width: "100%" }}
-          className="flex gap-10 mt-10 justify-around"
-        >
-          <div
-            style={{ width: "100px" }}
-            className="flex text-sm items-center gap-1"
-          >
-            <div className="text-6xl font-semibold">26</div>
-            Projects Completed
-          </div>
-          <div
-            style={{ width: "100px" }}
-            className="flex text-sm items-center gap-1"
-          >
-            <div className="text-6xl font-semibold">7</div>
-            Technologies Mastered
-          </div>
-          <div
-            style={{ width: "100px" }}
-            className="flex text-sm items-center gap-1"
-          >
-            <div className="text-6xl font-semibold">500</div>
-            Code Commits
-          </div>
+        {/* part stats */}
+        <div className="flex font-mono mt-10 w-auto ">
+          {stats.map((el) => {
+            return (
+              <div className=" flex w-[100%] ">
+                <div className=" m-auto gap-2 flex w-10 ">
+                  <CountUp
+                    end={el.num}
+                    duration={5}
+                    delay={0.5}
+                    className="text-6xl font-semibold "
+                  />
+                  <p className="w-4  flex text-[12px] items-center  ">
+                    {el.text}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </body>
     </>

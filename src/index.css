@@ -27,7 +27,7 @@ code {
   letter-spacing: 0.3px;
 }
 #liNav:hover {
-  color: rgb(59, 231, 160);
+  color: rgb(15, 22, 36);
 }
 #liNavContact {
   color: rgb(43, 255, 131);
@@ -98,9 +98,11 @@ code {
   width: 100%; */
   border-radius: 50%;
   /* cursor: pointer; */
-  stroke: red;
+  stroke: rgb(43, 255, 131);
+  stroke-width: 4px;
   fill: transparent;
-  stroke-dasharray: 10 13 43;
+
+  
   /* animation: rotate 4s linear infinite ; */
 }
 

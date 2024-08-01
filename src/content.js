@@ -5,8 +5,8 @@ import Skills  from "./components/skills";
 
 export default function home() {
   return (
-    <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-      <div style={{ width: "65%" }}>
+    <div style={{ width: "100%", display: "flex", justifyContent: "center",overflowX:'hidden' }}>
+      <div style={{ width: "65%", }}>
         <header
           style={{
             textTransform: "capitalize",
