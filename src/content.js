@@ -5,8 +5,8 @@ import Skills from "./components/skills";
 
 export default function home() {
   return (
-    <div className="w-full flex justify-center overflow-x-hidden">
-      <div style={{ width: "65%", overflow:'hidden' }}>
+    <div className=" w-full flex justify-center overflow-x-hidden ">
+      <div className="m-2 sm:w-2/3 overflow-hidden ">
         <header className="capitalize sm:flex w-full justify-between mt-5 px-4 sm:px-0">
           <div className="text-center mb-3 text-white font-sans text-lg font-bold">
             ISS<span className="text-[#2bff96]">AM.</span>

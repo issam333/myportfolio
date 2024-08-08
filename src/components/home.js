@@ -12,8 +12,6 @@ import cv from "./cv.pdf";
 import myImg from "./myImg.jpg";
 import CountUp from "react-countup";
 
-
-
 export default function home() {
   let stats = [
     {
@@ -33,12 +31,10 @@ export default function home() {
 
   return (
     <>
-      <body
-        className="font-mono text-white mt-16"
-      >
-        <div className=" flex-row-reverse sm:grid sm:grid-cols-2">
-          {/* partLeft */}
-          <div className="partLeft">
+      <body className="font-mono text-white mt-5">
+        <div className=" flex gap-3 flex-col-reverse  lg:grid lg:grid-cols-2">
+          {/* partLeft or bottom */}
+          <div className="text-center sm:text-start partLeft">
             <motion.p className="font-mono text-sm text-slate-300 ">
               Frontend Web Developer
             </motion.p>
@@ -57,16 +53,11 @@ export default function home() {
               dynamic web applications and Laravel for efficient backend
               integration.
             </p>
-            <div
-              className=" max-h-10 flex items-center gap-10 mt-4"
-            >
+            <div className="  max-h-10 flex flex-col sm:flex-row sm:justify-around items-center gap-2 mt-10">
               <a href={cv} download>
                 <button className="btnDownload">
-                  Download CV
-                  <FontAwesomeIcon
-                    className="ml-1"
-                    icon={faDownload}
-                  />
+                  Download CV~
+                  <FontAwesomeIcon className="ml-1" icon={faDownload} />
                 </button>
               </a>
               <div
@@ -76,28 +67,28 @@ export default function home() {
                 <a
                   href=""
                   style={{ color: "rgb(43, 255, 131)" }}
-                  className="text-2xl hover:scale-150 duration-200"
+                  className="text-2xl sm:hover:scale-150 duration-200"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
                 <a
                   href=""
                   style={{ color: "rgb(43, 255, 131)" }}
-                  className="text-2xl hover:scale-150 duration-200"
+                  className="text-2xl sm:hover:scale-150 duration-200"
                 >
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
                 <a
                   href=""
                   style={{ color: "rgb(43, 255, 131)" }}
-                  className="text-2xl hover:scale-150 duration-200"
+                  className="text-2xl sm:hover:scale-150 duration-200"
                 >
                   <FontAwesomeIcon icon={faWhatsapp} />
                 </a>
                 <a
                   href=""
                   style={{ color: "rgb(43, 255, 131)" }}
-                  className="text-2xl hover:scale-150 duration-200"
+                  className="text-2xl sm:hover:scale-150 duration-200"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
@@ -105,39 +96,15 @@ export default function home() {
             </div>
           </div>
 
-          {/* partRight */}
+          {/* partRight or top */}
 
-          <div style={{ display: "flex", minWidth: "400px" }} className=" ">
-            <div
-              style={{
-                display: "flex",
-                width: "70%",
-                justifyContent: "center",
-                alignItems: "center",
-                margin: "auto",
-                overflow: "hiden",
-                position: "relative",
-                // background: "aqua",
-              }}
-            >
+          <div className="flex sm:min-w-[400px] ">
+            <div className="flex w-[70%] justify-center items-center m-auto overflow-hidden relative">
               <img
                 src={myImg}
-                style={{
-                  borderRadius: "50%",
-                  width: "199px",
-                  overflow: "hiden",
-                  height: "199px",
-                  margin: "10px",
-                }}
+                className="rounded-full w-[199px] h-[199px] overflow-hidden m-2"
               />
-              <motion.svg
-                style={{
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  // background: "green",
-                }}
-              >
+              <motion.svg className="absolute h-full w-full">
                 <motion.circle
                   cx="143"
                   cy="109.5"
@@ -165,11 +132,11 @@ export default function home() {
           </div>
         </div>
         {/* part stats */}
-        <div className="flex font-mono mt-10 w-auto ">
+        <div className=" flex font-mono mt-14 w-auto ">
           {stats.map((el) => {
             return (
-              <div className=" flex w-[100%] ">
-                <div className=" m-auto gap-2 flex w-10 ">
+              <div className=" flex-col justify-start  w-[100%] ">
+                <div className=" mr lg:m-auto gap-2 flex w-10 ">
                   <CountUp
                     end={el.num}
                     duration={5}
