@@ -135,15 +135,15 @@ export default function home() {
         <div className=" flex font-mono mt-14 w-auto ">
           {stats.map((el) => {
             return (
-              <div className=" flex-col justify-start  w-[100%] ">
-                <div className=" mr lg:m-auto gap-2 flex w-10 ">
+              <div className=" justify-start  w-[100%] ">
+                <div className="  lg:m-auto gap-2 flex w-10 ">
                   <CountUp
                     end={el.num}
                     duration={5}
                     delay={0.5}
-                    className="text-6xl font-semibold "
+                    className="text-4xl sm:text-6xl font-semibold "
                   />
-                  <p className="w-4  flex text-[12px] items-center  ">
+                  <p className="w-4 text-[10px]  flex sm:text-[12px] items-center  ">
                     {el.text}
                   </p>
                 </div>
