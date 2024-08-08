@@ -34,13 +34,9 @@ export default function home() {
   return (
     <>
       <body
-        style={{
-          color: "#fff",
-          marginTop: "70px",
-        }}
-        className="font-mono"
+        className="font-mono text-white mt-16"
       >
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)" }}>
+        <div className=" flex-row-reverse sm:grid sm:grid-cols-2">
           {/* partLeft */}
           <div className="partLeft">
             <motion.p className="font-mono text-sm text-slate-300 ">
@@ -49,7 +45,7 @@ export default function home() {
             <p className="font-mono text-5xl text-slate-300">Hello I'm</p>
             <p
               style={{ color: "rgb(43, 255, 131)" }}
-              className="font-mono text-5xl font-bold "
+              className="font-mono text-5xl font-bold text-teal-400 "
             >
               Issam Asraoui
             </p>
@@ -62,14 +58,13 @@ export default function home() {
               integration.
             </p>
             <div
-              style={{ maxHeight: "40px" }}
-              className="flex items-center gap-10 mt-4"
+              className=" max-h-10 flex items-center gap-10 mt-4"
             >
               <a href={cv} download>
                 <button className="btnDownload">
                   Download CV
                   <FontAwesomeIcon
-                    style={{ marginLeft: "5px" }}
+                    className="ml-1"
                     icon={faDownload}
                   />
                 </button>
