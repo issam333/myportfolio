@@ -9,6 +9,7 @@ import {
   faLaravel,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function skills() {
   return (

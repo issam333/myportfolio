@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
 import {
@@ -12,7 +12,13 @@ import cv from "./cv.pdf";
 import myImg from "./myImg.jpg";
 import CountUp from "react-countup";
 
-export default function home() {
+
+
+export default function Home() {
+  let [innerWidth,steInnerWidth] = useState(window.innerWidth >=500 ? ["143", "109.5"] : ["125", "108"])
+  console.log(innerWidth[0])
+  
+  
   let stats = [
     {
       num: 12,
@@ -27,7 +33,12 @@ export default function home() {
       text: "Code Commits",
     },
   ];
-  console.log();
+  // if(window.innerWidth >= '500'){
+  //   steInnerWidth(['143','109.5'])
+  // }
+  // else{
+  //   steInnerWidth(['143','109.5'])
+  // }
 
   return (
     <>
@@ -106,8 +117,8 @@ export default function home() {
               />
               <motion.svg className="absolute h-full w-full">
                 <motion.circle
-                  cx="143"
-                  cy="109.5"
+                  cx={innerWidth[0]}
+                  cy={innerWidth[1]}
                   r="100"
                   id="borderCicle"
                   strokeLinecap="round"
@@ -119,7 +130,6 @@ export default function home() {
                       "16 25 92 72",
                       "4 250 22 22",
                     ],
-                    rotate: [120, 360],
                   }}
                   transition={{
                     duration: 6,

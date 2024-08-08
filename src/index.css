@@ -95,7 +95,8 @@ code {
   border-radius: 50%;
   stroke: rgb(43, 255, 131);
   stroke-width: 4px;
-  fill: transparent;
+  fill:transparent;
+
 }
 
 /* @keyframes rotate{
