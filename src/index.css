@@ -93,7 +93,7 @@ code {
 
 #borderCicle {
   border-radius: 50%;
-  stroke: rgb(43, 255, 131);
+  stroke: #2bff83;
   stroke-width: 4px;
   fill:transparent;
 

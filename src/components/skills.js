@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 
-export default function skills() {
+export default function Skills(props) {
   return (
     <div className="text-slate-100 p-5 mt-2 block">
       <h1 className="text-center text-2xl m-1">my skills</h1>
@@ -54,6 +54,7 @@ export default function skills() {
             <FontAwesomeIcon icon={faLaravel} className="text-7xl" />
           </div>
         </a>
+        {props.name}
       </div>
     </div>
   );

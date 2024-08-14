@@ -2,12 +2,18 @@ import { Link } from "react-router-dom";
 import Home from "./components/home";
 import Projects from "./components/projects";
 import Skills from "./components/skills";
+import AboutMe from "./components/aboutMe";
+import ToTop from "./components/toTop";
+import { useState } from "react";
+import { stat } from "fs-extra";
 
-export default function home() {
+export default function Content() {
+  const [dataScrollY, setDataScrollY] = useState(false);
+
   return (
     <div className=" w-full flex justify-center overflow-x-hidden ">
-      <div className="m-2 sm:w-2/3 overflow-hidden ">
-        <header className="capitalize sm:flex w-full justify-between mt-5 px-4 sm:px-0">
+      <div className=" sm:w-2/3 overflow-hidden ">
+        <header className=" sm:bg-[#0f1624] fixed capitalize sm:flex w-[100%] sm:w-[66.7%] z-20 justify-between pt-4 px-4 sm:px-0">
           <div className="text-center mb-3 text-white font-sans text-lg font-bold">
             ISS<span className="text-[#2bff96]">AM.</span>
           </div>
@@ -22,6 +28,9 @@ export default function home() {
               <li className="hover:scale-125 duration-150" id="liNav">
                 skills
               </li>
+              <li className="hover:scale-125 duration-150" id="liNav">
+                about me
+              </li>
               <li
                 className="border-solid border-[1.9px] border-[#2bff83] px-[12px] py-[2px] rounded-full cursor-pointer"
                 id="liNavContact"
@@ -31,10 +40,14 @@ export default function home() {
             </ul>
           </div>
         </header>
-        <Home />
-        <Projects />
-        <Skills />
+        <div className="relative p-5 mt-[30px]">
+          <Home  />
+          <Projects />
+          <Skills />
+          <AboutMe />
+        </div>
       </div>
+      <ToTop/>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import img1 from "../imgs/imgs prg dashboard/img1.png";
 
 // demo code
 
-export default function projects() {
+export default function Projects() {
   let data = [
     {
       img: img1,

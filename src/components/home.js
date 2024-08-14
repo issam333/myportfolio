@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons/faDownload";
 import {
@@ -40,6 +40,20 @@ export default function Home() {
   //   steInnerWidth(['143','109.5'])
   // }
 
+  const elementRef = useRef(null);
+
+  let [test,setTest] = useState('0')
+
+  useEffect(() => {
+    if (elementRef.current) {
+      setTest( elementRef.current.getBoundingClientRect())
+      console.log('Element Position Y:', test);
+      
+      
+      // Example: Accessing specific properties
+    }
+  },[]);
+
   return (
     <>
       <body className="font-mono text-white mt-5">
@@ -66,8 +80,8 @@ export default function Home() {
             </p>
             <div className="  max-h-10 flex flex-col sm:flex-row sm:justify-around items-center gap-2 mt-10">
               <a href={cv} download>
-                <button className="btnDownload">
-                  Download CV~
+                <button className="btnDownload" ref={elementRef} >
+                  Download CV 
                   <FontAwesomeIcon className="ml-1" icon={faDownload} />
                 </button>
               </a>
