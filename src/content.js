@@ -5,10 +5,10 @@ import Skills from "./components/skills";
 import AboutMe from "./components/aboutMe";
 import ToTop from "./components/toTop";
 import { useState } from "react";
-import { stat } from "fs-extra";
+
 
 export default function Content() {
-  const [dataScrollY, setDataScrollY] = useState(false);
+  const [dataScrollY, setDataScrollY] = useState('');
 
   return (
     <div className=" w-full flex justify-center overflow-x-hidden ">
@@ -41,13 +41,16 @@ export default function Content() {
           </div>
         </header>
         <div className="relative p-5 mt-[30px]">
-          <Home  />
+
+
+
+          <Home dataScrollY={dataScrollY} setDataScrollY={setDataScrollY} />
           <Projects />
           <Skills />
           <AboutMe />
         </div>
       </div>
-      <ToTop/>
+      <ToTop dataScrollY={dataScrollY} />
     </div>
   );
 }

@@ -14,10 +14,9 @@ import CountUp from "react-countup";
 
 
 
-export default function Home() {
-  let [innerWidth,steInnerWidth] = useState(window.innerWidth >=500 ? ["143", "109.5"] : ["125", "108"])
-  console.log(innerWidth[0])
-  
+export default function Home({dataScrollY ,setDataScrollY}) {
+  let [innerWidth,steInnerWidth] = useState(window.innerWidth >=500 ? ["143", "109.5"] : ["120", "108"])
+
   
   let stats = [
     {
@@ -33,26 +32,17 @@ export default function Home() {
       text: "Code Commits",
     },
   ];
-  // if(window.innerWidth >= '500'){
-  //   steInnerWidth(['143','109.5'])
-  // }
-  // else{
-  //   steInnerWidth(['143','109.5'])
-  // }
 
   const elementRef = useRef(null);
 
-  let [test,setTest] = useState('0')
 
   useEffect(() => {
     if (elementRef.current) {
-      setTest( elementRef.current.getBoundingClientRect())
-      console.log('Element Position Y:', test);
+      setDataScrollY( elementRef.current.getBoundingClientRect())
       
-      
-      // Example: Accessing specific properties
+  
     }
-  },[]);
+},[]);
 
   return (
     <>

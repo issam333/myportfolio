@@ -6,19 +6,19 @@ import { useRef, useEffect } from 'react';
 
 
 
-export default function ToTop() {
-  console.log(window.scrollY)
-  let [functionTop,setFunctionTop] = useState('red')
+export default function ToTop({dataScrollY}) {
+
+  let [functionTop,setFunctionTop] = useState('none')
   useEffect(()=>{
     window.addEventListener("scroll",()=>{
-      if(window.scrollY >= 552){
-        setFunctionTop('flex')
-      }else{
+      if(window.scrollY <= dataScrollY){
         setFunctionTop('none')
+      }else{
+        setFunctionTop('flex')
       }
     })
-  })
-  console.log(test)
+  },[])
+
   return (
       <div
         onClick={()=>{window.scroll({ 
