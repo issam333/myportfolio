@@ -1,9 +1,9 @@
 import React from "react";
 import img1 from "../imgs/imgs prg dashboard/img1.png";
-
+import { useState,useEffect, useRef } from "react";
 // demo code
 
-export default function Projects() {
+export default function Projects({btnWork,SetBtnWork}) {
   let data = [
     {
       img: img1,
@@ -34,12 +34,20 @@ export default function Projects() {
     </>
   ));
 
+  let testRef = useRef(null)
+  useEffect(()=>{
+    if(testRef.current){
+      SetBtnWork( testRef.current.getBoundingClientRect())
+    }
+
+  },[])
+
   return (
-    <div className="flex">
-      <div id="prj" className="border rounded-md capitalize mt-12 mb-4 justify-center">
+    <div className="flex" ref={testRef}>
+      <div id="prj" className=" duration-[0.5s] border rounded-md capitalize mt-12 mb-4 justify-center">
         <div
           id="title"
-          className="flex font-extrabold text-white  justify-center mt-5"
+          className="duration-[0.5s] flex font-extrabold text-white  justify-center mt-5"
         >
           my projects
         </div>
